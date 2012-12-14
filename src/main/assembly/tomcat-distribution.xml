@@ -44,8 +44,6 @@
         <include>*:*:jar</include>
       </includes>
       <excludes>
-        <!-- This artifact is overriden -->
-        <exclude>org.exoplatform.portal:portal.webui.core:jar</exclude>
         <!-- Never include apache tomcat artifacts to avoid conflicts -->
         <exclude>org.apache.tomcat:*:*</exclude>
         <!-- commons-logging is forbidden and must be replaced by org.slf4j:jcl-over-slf4j -->
@@ -72,6 +70,8 @@
         <exclude>org.jmock:*:*</exclude>
         <exclude>jmock:*:*</exclude>
         <exclude>org:mockito:*:*</exclude>
+        <!-- This artifact is replaced to override GateIn UI -->
+        <exclude>org.exoplatform.portal:exo.portal.webui.core:jar</exclude>
       </excludes>
       <outputFileNameMapping>${artifact.artifactId}-${artifact.baseVersion}.${artifact.extension}</outputFileNameMapping>
       <useProjectArtifact>false</useProjectArtifact>
